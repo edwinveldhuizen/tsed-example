@@ -1,7 +1,6 @@
 {
-  "type": "module",
   "scripts": {
-    "dev": "node --loader ts-node/esm src/index.ts"
+    "dev": "ts-node --project tsconfig.json src/index.ts"
   },
   "dependencies": {
     "@tsed/ajv": "^6.100.0",

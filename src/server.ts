@@ -2,12 +2,16 @@ import { Configuration, Inject } from "@tsed/di";
 import { PlatformApplication } from "@tsed/common";
 import * as bodyParser from "body-parser";
 import { Application } from "express";
+import { ExampleController } from "./controller/ExampleController";
 
 const rootDir = __dirname;
 
 @Configuration({
   rootDir,
   acceptMimes: ["application/json"],
+  mount: {
+    "/": [ExampleController],
+  },
 })
 export class Server {
   @Inject()
